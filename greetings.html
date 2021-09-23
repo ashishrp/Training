@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:lightgreen;
+        }
+        /* .photo{
+            height:200px;
+            background-image: linear-gradient(to right, red, blue, green)
+        } */
+        
+        
+    </style>
+    <script>
+        var filename=""; 
+        function savefile() { 
+        var f=document.getElementById("file1"); 
+        var files=f.files[0]; 
+        if(files.size>2097152){
+            alert("File too big!");
+        }
+        filename=files.name; 
+        // alert(filename+ " done"); 
+        document.getElementById("img1").src=filename; 
+        }
+        function submitted(){
+            var from1 = document.getElementById("from").value;
+            var to1 = document.getElementById("to").value;
+            var greeting1 = document.getElementById("greeting").value;
+
+            localStorage.setItem("from2", from1);
+            localStorage.setItem("to2", to1);
+            localStorage.setItem("greeting2", greeting1);
+
+        }
+        function preview(){
+            var retFont = document.querySelector("#font").value;
+            
+            var retSize = document.querySelector("#size").value;
+            // alert(retSize);
+            // alert(retFont);
+        
+            document.getElementById("greeting").style.fontFamily = retFont;
+            document.getElementById("greeting").style.fontSize = retSize;
+            //document.getElementById("#greeting").innerHTML = ;
+
+        }
+    </script>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; padding: 10px; max-width: 500px; margin: auto;">
+    <div class="photo"></div>
+    <input type="file" name="" id="file1"> 
+    <input type="button" value="Upload" onclick="savefile()"/><br/> 
+    <!-- <input type="button" value="Show"/> -->
+    <br/>
+    <img height="300px" width="600px" id="img1"> 
+    <form>
+    
+        <br/>
+    <table> 
+    <tr>
+        <td><label for="from"></label>From:</td> 
+        <td><input type="text" name="from" id = "from" required></td>
+    </tr>
+    
+    <tr>
+        <td><label for="to"></label>To:</td> 
+        <td><input type="text" name="to" id = "to" required></td>
+    </tr>
+    <tr>
+        <td><label for="greeting"></label>Greeting:</td> 
+        <td><input type="text" name="greeting" id = "greeting" required></td>
+    </tr>
+    <tr>
+        <td>
+            <select id="font">
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Verdana">Verdana</option>
+                <option value="LucidaHandwriting-Italic">Lucida Handwriting</option>
+            </select>
+
+        </td>
+        <td>
+            <select id="size">
+                <option value="10px">10</option>
+                <option value="20px">20</option>
+                <option value="30px">30</option>
+                <option value="40px">40</option>
+                <option value="50px">50</option>
+            </select>
+        </body>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick = "preview()" >Preview</button>
+        </td>
+        <td>
+            <a href="greetingsNext.html" onclick="submitted()" style = "font-style: italic;">Click Here</a>
+        </td>
+    </tr>    
+    </table>    
+    </form>
+    
+</body>
+</html>
