@@ -1,0 +1,19 @@
+<table class = table table-striped>
+    <thead>
+        <th>EmpId</th>
+        <th>PhoneNo</th>
+        <th>NoticePeriodDate</th>
+        <th>NoticePeriod</th>
+        <th>ResignationDate</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let dataitem of resignationList">
+            <td>{{dataitem.EmpId}}</td>
+            <td>{{dataitem.PhoneNo}}</td>
+            <td>{{dataitem.NoticePeriodDate}}</td>
+            <td>{{dataitem.NoticePeriod}}</td>
+            <td>{{dataitem.ResignationDate}}</td>
+        </tr>
+    </tbody>
+
+</table>

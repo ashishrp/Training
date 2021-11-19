@@ -1,0 +1,19 @@
+<table class = table table-striped>
+    <thead>
+        <th>TrainerId</th>
+        <th>TrainerName</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Technology</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let dataitem of trainerList">
+            <td>{{dataitem.TrainerId}}</td>
+            <td>{{dataitem.TrainerName}}</td>
+            <td>{{dataitem.Address}}</td>
+            <td>{{dataitem.City}}</td>
+            <td>{{dataitem.Technology}}</td>
+        </tr>
+    </tbody>
+
+</table>

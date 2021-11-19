@@ -1,0 +1,20 @@
+<form #loginfrm="ngForm" class="form-group" (ngSubmit)="addtra(loginfrm.value)" >
+    <fieldset>
+<label>Enter EmpId</label>
+<input type="number" [(ngModel)]="addt.TrainerId" name="EmpId"/>
+<br/>
+<label>Enter PhoneNo</label>
+<input type="number" [(ngModel)]="addt.TrainerName" name="PhoneNo"/>
+<br/>
+<label>Enter NoticePeriodDate</label>
+<input type="date" [(ngModel)]="addt.Address" name="NoticePeriodDate"/>
+<br/>
+<label>Enter NoticePeriod</label>
+<input type="number" [(ngModel)]="addt.City" name="NoticePeriod"/>
+<br/>
+<label>ResignationDate</label>
+<input type="date" [(ngModel)]="addt.Technology" name="ResignationDate"/>
+<br/>
+<input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+</form>

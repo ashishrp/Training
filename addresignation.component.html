@@ -1,0 +1,20 @@
+<form #loginfrm="ngForm" class="form-group" (ngSubmit)="addresign(loginfrm.value)" >
+    <fieldset>
+<label>Enter EmpId</label>
+<input type="number" [(ngModel)]="addr.EmpId" name="EmpId"/>
+<br/>
+<label>Enter PhoneNo</label>
+<input type="number" [(ngModel)]="addr.PhoneNo" name="PhoneNo"/>
+<br/>
+<label>Enter NoticePeriodDate</label>
+<input type="date" [(ngModel)]="addr.NoticePeriodDate" name="NoticePeriodDate"/>
+<br/>
+<label>Enter NoticePeriod</label>
+<input type="number" [(ngModel)]="addr.NoticePeriod" name="NoticePeriod"/>
+<br/>
+<label>ResignationDate</label>
+<input type="date" [(ngModel)]="addr.ResignationDate" name="ResignationDate"/>
+<br/>
+<input type="submit" class="btn btn-primary" name="vu"/>
+    </fieldset>
+</form>
